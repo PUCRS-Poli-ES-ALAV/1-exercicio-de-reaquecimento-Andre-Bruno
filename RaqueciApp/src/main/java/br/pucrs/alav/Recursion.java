@@ -9,6 +9,7 @@ public class Recursion {
         return fator2 + somaSucessiva(fator1-1, fator2);   
     }
 
+    // Soma de dois números naturais, através de incrementos sucessivos (Ex.: 3 + 2 = + + (+ + + 1)).
     public static int incrementoSucessivo(int valor1, int valor2){
         int soma = 0;
         if(valor1 == 0 && valor2 == 0)
@@ -20,11 +21,18 @@ public class Recursion {
         return soma += valor1 + incrementoSucessivo(valor1, valor2-1);
     }
 
+    //Cálculo de 1 + 1/2 + 1/3 + 1/4 + ... + 1/N.
+    public static double somatorio(int n){
+        if(n == 0)
+            return 0;
+        return 1.0/n + somatorio(n-1);
+    }
 	public static void main(String[] args) {
-        int fator1 = 6;
+        int fator1 = 0;
         int fator2 = 4;
 
         System.out.println(somaSucessiva(fator1, fator2));
         System.out.println(incrementoSucessivo(fator1, fator2));
+        System.out.println(somatorio(fator1));
     }
 }
