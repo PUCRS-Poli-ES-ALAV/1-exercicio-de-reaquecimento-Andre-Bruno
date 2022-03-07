@@ -14,15 +14,15 @@ public class Recursion {
         if(valor1 == 0 && valor2 == 0)
             return soma;
         else if(valor1 == 0)
-            return soma += valor2 + incrementoSucessivo(valor1, valor2-1);
+            return soma += 1 + incrementoSucessivo(valor1, valor2-1);
         else if(valor2 == 0)
-            return soma += valor1 + incrementoSucessivo(valor1-1, valor2);   
-        return soma += valor1 + incrementoSucessivo(valor1, valor2-1);
+            return soma += 1 + incrementoSucessivo(valor1-1, valor2);   
+        return soma += 1 + incrementoSucessivo(valor1, valor2-1);
     }
 
 	public static void main(String[] args) {
-        int fator1 = 6;
-        int fator2 = 4;
+        int fator1 = 3;
+        int fator2 = 2;
 
         System.out.println(somaSucessiva(fator1, fator2));
         System.out.println(incrementoSucessivo(fator1, fator2));
