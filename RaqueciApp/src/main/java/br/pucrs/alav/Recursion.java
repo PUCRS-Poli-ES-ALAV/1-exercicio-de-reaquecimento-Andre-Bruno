@@ -78,6 +78,5 @@ public class Recursion {
         int value2 = 1;
 
         System.out.println(sucessiveSum(value1, value2));
-
     }
 }
